@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+
+</style>
+
+
+</head>
+<body>
+    <img src="off.png" onmouseover="lightLamp(x)" id="dark">
+    <img src="" onmouseout="darkLamp(y)" id="light">
+      
+
+
+
+
+
+    <script>
+       function lightLamp(x){
+          
+           var x=document.getElementById("light").setAttribute("src","on.png");
+          
+        
+        }
+
+        function darkLamp(y){
+         var y=document.getElementById("dark").setAttribute("src","off.png");
+        
+
+        }                     
+
+
+        document.getElementById("dark").addEventListener("click",lightLamp);
+         document.getElementById("dark").onmouseover=function(){
+            
+            
+           var x=document.getElementById("light").setAttribute("src","on.png");
+           document.getElementById("dark").src=x;
+    
+    
+          };
+        document.getElementById("light").addEventListener("click",darkLamp);
+         document.getElementById("light").onmouseout=function(){
+            
+         
+            var y=document.getElementById("dark").setAttribute("src","off.png");
+            document.getElementById("light").src=y;
+    
+    
+          };
+
+        
+        
+
+
+    </script>
+</body>
+</html>
